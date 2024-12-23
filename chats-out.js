@@ -43,7 +43,6 @@ module.exports = function(RED) {
                     numb = await webNubmerSeteing(numb);
                     if(typeof inputMessage === "object"){
                         inputMessage = new Buttons(inputMessage.text, inputMessage.buttons, "text" ,inputMessage.footer);
-                        node.waClient.sendMessage(numb, inputMessage);
                     }
                     node.waClient.sendMessage(numb, inputMessage);
                 }
